@@ -1,0 +1,894 @@
+<div class="catalog-filters">
+    <div class="container">
+
+        <div class="catalog-filter__wrap">
+            <a href="" class="open-popup-filter button-text">
+                <img src="./img/icons/filter.svg" alt=""> filters
+            </a>
+            <div class="filters-list">
+
+                <!-- Price -->
+                <div class="filter-item">
+                    <button class="filter-toggle">Price <img src="./img/icons/caret-down-black.svg" alt=""></button>
+                    <div class="filter-dropdown">
+                        <div class="price-slider">
+                            <div class="price-slider__wrap">
+                                <input type="number" class="min-price" data-min="0" value="0" />
+                                <input type="number" class="max-price" data-max="7215" value="7215" />
+                            </div>
+                            <div class="range-track" id="range-track"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Metal -->
+                <div class="filter-item">
+                    <button class="filter-toggle">Metal <img src="./img/icons/caret-down-black.svg" alt=""></button>
+                    <div class="filter-dropdown">
+
+                        <label class="checkbox">
+                            <input type="checkbox" data-value="Silver" />
+                            <div class="checkbox-mark"></div>
+                            <div class="checkbox-text">Silver <span>(93)</span></div>
+                        </label>
+
+                        <label class="checkbox">
+                            <input type="checkbox" data-value="14k yellow gold" />
+                            <div class="checkbox-mark"></div>
+                            <div class="checkbox-text">14k yellow gold <span>(27)</span></div>
+                        </label>
+
+                        <label class="checkbox">
+                            <input type="checkbox" data-value="All gold" />
+                            <div class="checkbox-mark"></div>
+                            <div class="checkbox-text">All gold <span>(10)</span></div>
+                        </label>
+
+                    </div>
+                </div>
+
+                <!-- Type of Jewelry -->
+                <div class="filter-item">
+                    <button class="filter-toggle">Type of Jewelry <img src="./img/icons/caret-down-black.svg"
+                            alt=""></button>
+                    <div class="filter-dropdown">
+
+                        <label class="checkbox">
+                            <input type="checkbox" data-value="Pendants" />
+                            <div class="checkbox-mark"></div>
+                            <div class="checkbox-text">Pendants <span>(27)</span></div>
+                        </label>
+
+                    </div>
+                </div>
+
+                <!-- Collections -->
+                <div class="filter-item">
+                    <button class="filter-toggle">Collections <img src="./img/icons/caret-down-black.svg"
+                            alt=""></button>
+                    <div class="filter-dropdown">
+
+                        <label class="checkbox">
+                            <input type="checkbox" data-value="Zodiac signs" />
+                            <div class="checkbox-mark"></div>
+                            <div class="checkbox-text">Zodiac signs <span>(100)</span></div>
+                        </label>
+
+                        <label class="checkbox">
+                            <input type="checkbox" data-value="Adjustable" />
+                            <div class="checkbox-mark"></div>
+                            <div class="checkbox-text">Adjustable <span>(10)</span></div>
+                        </label>
+
+                        <label class="checkbox">
+                            <input type="checkbox" data-value="Geometry" />
+                            <div class="checkbox-mark"></div>
+                            <div class="checkbox-text">Geometry <span>(403)</span></div>
+                        </label>
+
+                        <label class="checkbox">
+                            <input type="checkbox" data-value="Animal" />
+                            <div class="checkbox-mark"></div>
+                            <div class="checkbox-text">Animal <span>(22)</span></div>
+                        </label>
+
+                        <label class="checkbox">
+                            <input type="checkbox" data-value="Christianity" />
+                            <div class="checkbox-mark"></div>
+                            <div class="checkbox-text">Christianity <span>(60)</span></div>
+                        </label>
+
+                        <label class="checkbox">
+                            <input type="checkbox" data-value="Minerals Mix" />
+                            <div class="checkbox-mark"></div>
+                            <div class="checkbox-text">Minerals Mix <span>(11)</span></div>
+                        </label>
+
+                    </div>
+                </div>
+
+                <!-- Size -->
+                <div class="filter-item">
+                    <button class="filter-toggle">Size <img src="./img/icons/caret-down-black.svg" alt=""></button>
+                    <div class="filter-dropdown">
+
+                        <label class="checkbox">
+                            <input type="checkbox" data-value="16" />
+                            <div class="checkbox-mark"></div>
+                            <div class="checkbox-text">16</div>
+                        </label>
+
+                        <label class="checkbox">
+                            <input type="checkbox" data-value="17" />
+                            <div class="checkbox-mark"></div>
+                            <div class="checkbox-text">17</div>
+                        </label>
+
+                        <label class="checkbox">
+                            <input type="checkbox" data-value="18" />
+                            <div class="checkbox-mark"></div>
+                            <div class="checkbox-text">18</div>
+                        </label>
+
+                        <label class="checkbox">
+                            <input type="checkbox" data-value="19" />
+                            <div class="checkbox-mark"></div>
+                            <div class="checkbox-text">19</div>
+                        </label>
+
+                        <label class="checkbox">
+                            <input type="checkbox" data-value="20" />
+                            <div class="checkbox-mark"></div>
+                            <div class="checkbox-text">20</div>
+                        </label>
+
+                        <label class="checkbox">
+                            <input type="checkbox" data-value="705" />
+                            <div class="checkbox-mark"></div>
+                            <div class="checkbox-text">705</div>
+                        </label>
+
+                    </div>
+                </div>
+
+                <!-- Topics -->
+                <div class="filter-item">
+                    <button class="filter-toggle">Topics <img src="./img/icons/caret-down-black.svg" alt=""></button>
+                    <div class="filter-dropdown">
+
+                        <label class="checkbox">
+                            <input type="checkbox" data-value="Beadswork" />
+                            <div class="checkbox-mark"></div>
+                            <div class="checkbox-text">Beadswork <span>(112)</span></div>
+                        </label>
+
+                        <label class="checkbox">
+                            <input type="checkbox" data-value="With gemstones" />
+                            <div class="checkbox-mark"></div>
+                            <div class="checkbox-text">With gemstones <span>(50)</span></div>
+                        </label>
+
+                        <label class="checkbox">
+                            <input type="checkbox" data-value="Without gemstones" />
+                            <div class="checkbox-mark"></div>
+                            <div class="checkbox-text">Without gemstones <span>(402)</span></div>
+                        </label>
+
+                        <label class="checkbox">
+                            <input type="checkbox" data-value="Letters" />
+                            <div class="checkbox-mark"></div>
+                            <div class="checkbox-text">Letters <span>(77)</span></div>
+                        </label>
+
+                        <label class="checkbox">
+                            <input type="checkbox" data-value="Infinity" />
+                            <div class="checkbox-mark"></div>
+                            <div class="checkbox-text">Infinity <span>(12)</span></div>
+                        </label>
+
+                        <label class="checkbox">
+                            <input type="checkbox" data-value="With cycles" />
+                            <div class="checkbox-mark"></div>
+                            <div class="checkbox-text">With cycles <span>(71)</span></div>
+                        </label>
+                        <label class="checkbox">
+                            <input type="checkbox" data-value="Letters" />
+                            <div class="checkbox-mark"></div>
+                            <div class="checkbox-text">Letters <span>(77)</span></div>
+                        </label>
+
+                        <label class="checkbox">
+                            <input type="checkbox" data-value="Infinity" />
+                            <div class="checkbox-mark"></div>
+                            <div class="checkbox-text">Infinity <span>(12)</span></div>
+                        </label>
+
+                        <label class="checkbox">
+                            <input type="checkbox" data-value="With cycles" />
+                            <div class="checkbox-mark"></div>
+                            <div class="checkbox-text">With cycles <span>(71)</span></div>
+                        </label>
+
+                    </div>
+                </div>
+
+                <!-- Engraving Option -->
+                <div class="filter-item">
+                    <button class="filter-toggle">Engraving Option <img src="./img/icons/caret-down-black.svg"
+                            alt=""></button>
+                    <div class="filter-dropdown">
+
+                        <label class="checkbox">
+                            <input type="checkbox" data-value="Engraving yes" />
+                            <div class="checkbox-mark"></div>
+                            <div class="checkbox-text">Yes</div>
+                        </label>
+
+                    </div>
+                </div>
+
+                <!-- Clear All -->
+                <button class="clear-btn button-text">Clear All</button>
+
+            </div>
+
+
+            <!-- Sort Right -->
+            <div class="filters-right">
+                <div class="filter-item sort">
+                    <button class="filter-toggle">
+                        Sort by <img src="./img/icons/caret-down-black.svg" alt="">
+                    </button>
+                    <div class="filter-dropdown">
+                        <label data-value="newest">Newest first</label>
+                        <label data-value="price-asc">Price: low to high</label>
+                        <label data-value="price-desc">Price: high to low</label>
+                    </div>
+
+                    <input type="hidden" class="sort-input" name="sort" value="newest">
+                </div>
+            </div>
+
+        </div>
+
+        <div class="catalog-filter__bottom">
+            <div class="selected-filters"></div>
+            <div class="count">48 products</div>
+        </div>
+
+    </div>
+</div>
+
+<div class="modal-filter">
+    <div class="modal-filter__header  ">
+        <div class="stack fd-row justify-content-between">
+            <span class="modal-filter__header-title">filters</span>
+            <div class="btn-close">
+                <img src="./img/icons/close-white.svg" alt="">
+            </div>
+        </div>
+        <div class="count">48 products</div>
+    </div>
+    <div class="filter-content">
+
+        <div class="selected-filters"></div>
+
+        <div class="filters-list white">
+
+            <!-- Price -->
+            <div class="filter-item">
+                <button class="filter-toggle">Price <img src="./img/icons/caret-down.svg" alt=""></button>
+                <div class="filter-dropdown">
+                    <div class="price-slider">
+                        <div class="price-slider__wrap">
+                            <input type="number" class="min-price" data-min="0" value="0" />
+                            <input type="number" class="max-price" data-max="7215" value="7215" />
+                        </div>
+                        <div class="range-track" id="range-track"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Metal -->
+            <div class="filter-item">
+                <button class="filter-toggle">Metal <img src="./img/icons/caret-down.svg" alt=""></button>
+                <div class="filter-dropdown">
+
+                    <label class="checkbox">
+                        <input type="checkbox" data-value="Silver" />
+                        <div class="checkbox-mark"></div>
+                        <div class="checkbox-text">Silver <span>(93)</span></div>
+                    </label>
+
+                    <label class="checkbox">
+                        <input type="checkbox" data-value="14k yellow gold" />
+                        <div class="checkbox-mark"></div>
+                        <div class="checkbox-text">14k yellow gold <span>(27)</span></div>
+                    </label>
+
+                    <label class="checkbox">
+                        <input type="checkbox" data-value="All gold" />
+                        <div class="checkbox-mark"></div>
+                        <div class="checkbox-text">All gold <span>(10)</span></div>
+                    </label>
+
+                </div>
+            </div>
+
+            <!-- Type of Jewelry -->
+            <div class="filter-item">
+                <button class="filter-toggle">Type of Jewelry <img src="./img/icons/caret-down.svg" alt=""></button>
+                <div class="filter-dropdown">
+
+                    <label class="checkbox">
+                        <input type="checkbox" data-value="Pendants" />
+                        <div class="checkbox-mark"></div>
+                        <div class="checkbox-text">Pendants <span>(27)</span></div>
+                    </label>
+
+                </div>
+            </div>
+
+            <!-- Collections -->
+            <div class="filter-item">
+                <button class="filter-toggle">Collections <img src="./img/icons/caret-down.svg" alt=""></button>
+                <div class="filter-dropdown">
+
+                    <label class="checkbox">
+                        <input type="checkbox" data-value="Zodiac signs" />
+                        <div class="checkbox-mark"></div>
+                        <div class="checkbox-text">Zodiac signs <span>(100)</span></div>
+                    </label>
+
+                    <label class="checkbox">
+                        <input type="checkbox" data-value="Adjustable" />
+                        <div class="checkbox-mark"></div>
+                        <div class="checkbox-text">Adjustable <span>(10)</span></div>
+                    </label>
+
+                    <label class="checkbox">
+                        <input type="checkbox" data-value="Geometry" />
+                        <div class="checkbox-mark"></div>
+                        <div class="checkbox-text">Geometry <span>(403)</span></div>
+                    </label>
+
+                    <label class="checkbox">
+                        <input type="checkbox" data-value="Animal" />
+                        <div class="checkbox-mark"></div>
+                        <div class="checkbox-text">Animal <span>(22)</span></div>
+                    </label>
+
+                    <label class="checkbox">
+                        <input type="checkbox" data-value="Christianity" />
+                        <div class="checkbox-mark"></div>
+                        <div class="checkbox-text">Christianity <span>(60)</span></div>
+                    </label>
+
+                    <label class="checkbox">
+                        <input type="checkbox" data-value="Minerals Mix" />
+                        <div class="checkbox-mark"></div>
+                        <div class="checkbox-text">Minerals Mix <span>(11)</span></div>
+                    </label>
+
+                </div>
+            </div>
+
+            <!-- Size -->
+            <div class="filter-item">
+                <button class="filter-toggle">Size <img src="./img/icons/caret-down.svg" alt=""></button>
+                <div class="filter-dropdown">
+
+                    <label class="checkbox">
+                        <input type="checkbox" data-value="16" />
+                        <div class="checkbox-mark"></div>
+                        <div class="checkbox-text">16</div>
+                    </label>
+
+                    <label class="checkbox">
+                        <input type="checkbox" data-value="17" />
+                        <div class="checkbox-mark"></div>
+                        <div class="checkbox-text">17</div>
+                    </label>
+
+                    <label class="checkbox">
+                        <input type="checkbox" data-value="18" />
+                        <div class="checkbox-mark"></div>
+                        <div class="checkbox-text">18</div>
+                    </label>
+
+                    <label class="checkbox">
+                        <input type="checkbox" data-value="19" />
+                        <div class="checkbox-mark"></div>
+                        <div class="checkbox-text">19</div>
+                    </label>
+
+                    <label class="checkbox">
+                        <input type="checkbox" data-value="20" />
+                        <div class="checkbox-mark"></div>
+                        <div class="checkbox-text">20</div>
+                    </label>
+
+                    <label class="checkbox">
+                        <input type="checkbox" data-value="705" />
+                        <div class="checkbox-mark"></div>
+                        <div class="checkbox-text">705</div>
+                    </label>
+
+                </div>
+            </div>
+
+            <!-- Topics -->
+            <div class="filter-item">
+                <button class="filter-toggle">Topics <img src="./img/icons/caret-down.svg" alt=""></button>
+                <div class="filter-dropdown">
+
+                    <label class="checkbox">
+                        <input type="checkbox" data-value="Beadswork" />
+                        <div class="checkbox-mark"></div>
+                        <div class="checkbox-text">Beadswork <span>(112)</span></div>
+                    </label>
+
+                    <label class="checkbox">
+                        <input type="checkbox" data-value="With gemstones" />
+                        <div class="checkbox-mark"></div>
+                        <div class="checkbox-text">With gemstones <span>(50)</span></div>
+                    </label>
+
+                    <label class="checkbox">
+                        <input type="checkbox" data-value="Without gemstones" />
+                        <div class="checkbox-mark"></div>
+                        <div class="checkbox-text">Without gemstones <span>(402)</span></div>
+                    </label>
+
+                    <label class="checkbox">
+                        <input type="checkbox" data-value="Letters" />
+                        <div class="checkbox-mark"></div>
+                        <div class="checkbox-text">Letters <span>(77)</span></div>
+                    </label>
+
+                    <label class="checkbox">
+                        <input type="checkbox" data-value="Infinity" />
+                        <div class="checkbox-mark"></div>
+                        <div class="checkbox-text">Infinity <span>(12)</span></div>
+                    </label>
+
+                    <label class="checkbox">
+                        <input type="checkbox" data-value="With cycles" />
+                        <div class="checkbox-mark"></div>
+                        <div class="checkbox-text">With cycles <span>(71)</span></div>
+                    </label>
+                    <label class="checkbox">
+                        <input type="checkbox" data-value="Letters" />
+                        <div class="checkbox-mark"></div>
+                        <div class="checkbox-text">Letters <span>(77)</span></div>
+                    </label>
+
+                    <label class="checkbox">
+                        <input type="checkbox" data-value="Infinity" />
+                        <div class="checkbox-mark"></div>
+                        <div class="checkbox-text">Infinity <span>(12)</span></div>
+                    </label>
+
+                    <label class="checkbox">
+                        <input type="checkbox" data-value="With cycles" />
+                        <div class="checkbox-mark"></div>
+                        <div class="checkbox-text">With cycles <span>(71)</span></div>
+                    </label>
+
+                </div>
+            </div>
+
+            <!-- Engraving Option -->
+            <div class="filter-item">
+                <button class="filter-toggle">Engraving Option <img src="./img/icons/caret-down.svg" alt=""></button>
+                <div class="filter-dropdown">
+
+                    <label class="checkbox">
+                        <input type="checkbox" data-value="Engraving yes" />
+                        <div class="checkbox-mark"></div>
+                        <div class="checkbox-text">Yes</div>
+                    </label>
+
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <div class="popup-buttons gap-16">
+        <span class="btn button-outlined inverse clear-btn">clear</span>
+        <button class="btn button-contained inverse ">apply</button>
+    </div>
+</div>
+
+
+<style>
+    .modal-filter {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        z-index: 100;
+        background-color: #000000;
+        padding: 20px 0 100px;
+        display: flex;
+        flex-direction: column;
+        clip-path: circle(0% at 100% 0%);
+        transition: clip-path 0.45s ease-in-out;
+    }
+
+    .modal-filter.active {
+        clip-path: circle(150% at 100% 0%);
+    }
+
+    .modal-filter .range-track .noUi-connect,
+    .modal-filter .range-track.noUi-horizontal .noUi-handle {
+        background-color: #fff;
+    }
+
+    .modal-filter .range-track.noUi-target {
+
+        background-color: #848484;
+        border: 0;
+        box-shadow: none;
+    }
+
+    .modal-filter__header {
+        display: flex;
+        /*   position: absolute;
+        top: 20px; */
+        left: 0;
+        right: 0;
+        padding: 0 20px;
+        border-bottom: 1px solid #343434;
+        padding-bottom: 20px;
+        color: #fff;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .modal-filter__header .count {
+        color: #69737C;
+        display: none;
+    }
+
+    .modal-filter__header .count.active {
+        display: block;
+    }
+
+    .filter-toggle.active img {
+        transform: rotate(-180deg);
+    }
+
+    .modal-filter__header-title {
+
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 24px;
+        text-transform: uppercase;
+        color: #fff;
+    }
+
+    .modal-filter .popup-buttons {
+        position: absolute;
+        left: 20px;
+        right: 20px;
+        bottom: 20px;
+        display: flex;
+        align-items: center;
+    }
+
+    .modal-filter .popup-buttons .btn {
+        flex: 1;
+        min-width: auto;
+    }
+
+    .modal-filter .selected-tag {
+        color: #fff;
+    }
+
+    .modal-filter .selected-filters {
+        display: none;
+        padding: 20px;
+        border-bottom: 1px solid #343434;
+    }
+
+
+    .modal-filter .selected-filters.active {
+        display: flex;
+    }
+
+    .modal-filter .filters-list {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .modal-filter .filter-item {
+        border-bottom: 1px solid #343434;
+        width: 100%;
+    }
+
+    .modal-filter .filter-toggle {
+        color: White;
+        width: 100%;
+        justify-content: space-between;
+        padding: 20px;
+    }
+
+    .modal-filter .filter-item:after {
+        content: none !important;
+    }
+
+    .modal-filter .filter-dropdown {
+        position: static;
+        background: transparent;
+        padding: 0 20px 20px;
+        box-shadow: none;
+    }
+
+    .modal-filter .filter-content {
+        overflow: auto;
+    }
+
+    .filters-list.white .checkbox-text {
+        color: #fff;
+    }
+
+    .filters-list.white .checkbox-mark::after {
+        background-color: #fff;
+    }
+
+    .catalog-filter__wrap {
+        border-bottom: 1px solid #ddd;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+        padding: 12px 0;
+    }
+
+    .filters-list {
+        gap: 17px;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .catalog-filter__bottom {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        padding: 24px 0;
+    }
+
+    .catalog-filter__bottom .count {
+
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: #69737C;
+    }
+
+    .filter-item {
+        position: relative;
+    }
+
+    .filter-item:not(:last-of-type):after {
+        content: "";
+        position: absolute;
+        right: -9px;
+        height: 32px;
+        width: 1px;
+        background-color: #D9D9D9;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .filter-toggle {
+        background: transparent;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        padding: 6px 4px;
+        color: var(--text-color-black);
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        text-transform: uppercase;
+        gap: 4px;
+        padding: 12px 16px;
+
+    }
+
+    .filter-toggle img {
+        width: 16px;
+    }
+
+
+
+    .filter-dropdown {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: #fff;
+        padding: 16px;
+        display: none;
+        flex-direction: column;
+        min-width: 220px;
+        max-height: 260px;
+        overflow-y: auto;
+        z-index: 10;
+        box-shadow: 0px 0px 25px 0px #15161A0F;
+
+    }
+
+    .filter-dropdown:not(.touch-screen) ::-webkit-scrollbar,
+    .filter-dropdown:not(.touch-screen)::-webkit-scrollbar {
+        width: 5px;
+        height: 5px;
+        border-radius: 10px;
+    }
+
+    .filter-dropdown:not(.touch-screen) ::-webkit-scrollbar-track,
+    .filter-dropdown:not(.touch-screen)::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    .filter-dropdown:not(.touch-screen) ::-webkit-scrollbar-thumb,
+    .filter-dropdown:not(.touch-screen)::-webkit-scrollbar-thumb {
+        background: #8a8a8c;
+        border-radius: 10px;
+    }
+
+    .filter-dropdown .checkbox:not(:last-of-type) {
+        margin-bottom: 16px;
+    }
+
+    .filter-dropdown label {
+        display: flex;
+        align-items: center;
+
+        cursor: pointer;
+    }
+
+    .filter-dropdown input[type="checkbox"] {
+        width: 16px;
+        height: 16px;
+    }
+
+    .filter-item.sort .filter-dropdown {
+        left: auto;
+        right: 0;
+        min-width: auto;
+
+    }
+
+    .filter-item.sort .filter-dropdown label {
+        white-space: nowrap;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: var(--text-color-black);
+    }
+
+    .filter-item.sort .filter-toggle {
+        white-space: nowrap;
+    }
+
+    .filter-item.sort .filter-toggle span {
+        text-transform: none;
+    }
+
+    .filter-item.sort .filter-dropdown label:not(:last-of-type) {
+        margin-bottom: 12px;
+    }
+
+
+    /* Selected filters */
+    .selected-filters {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    .selected-tag {
+        padding: 7px 12px;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        border: 1px solid #D9D9D9;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: var(--text-color-black);
+    }
+
+    .selected-tag .remove-tag {
+        cursor: pointer;
+        font-size: 14px;
+        height: 16px;
+    }
+
+    .selected-tag img {
+        width: 16px;
+        height: 16px;
+    }
+
+    .clear-btn {
+        background: transparent;
+        cursor: pointer;
+    }
+
+    .price-slider__wrap {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        margin-bottom: 24px;
+    }
+
+    .price-slider__wrap input {
+        flex: 1;
+        height: 40px;
+        padding: 6px 16px;
+        color: var(--text-color-black);
+        font-size: 16px;
+        width: 120px;
+        border: 1px solid #D9D9D9;
+    }
+
+    .catalog-filters .open-popup-filter {
+        display: none;
+    }
+
+    @media (max-width:1280px) {
+
+        .catalog-filters .filter-toggle {
+            font-size: 14px;
+            line-height: 21px;
+            gap: 4px;
+            padding: 6px 8px;
+        }
+
+        .catalog-filters .button-text {
+            font-size: 14px;
+            line-height: 20px;
+        }
+    }
+
+    @media (max-width:768px) {
+
+        .catalog-filters .filters-list,
+        .catalog-filters .catalog-filter__bottom {
+            display: none;
+        }
+
+        .catalog-filters .open-popup-filter {
+            display: flex;
+            color: var(--text-color-black);
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 24px;
+            text-transform: uppercase;
+            gap: 4px;
+            padding-bottom: 0;
+            border: 0;
+        }
+
+        .catalog-filter__wrap {
+            border-bottom: 0;
+        }
+
+        .catalog-filters .filter-toggle {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 24px;
+        }
+
+        .catalog-filters .open-popup-filter img {
+            width: 24px;
+            height: 24px;
+        }
+    }
+</style>

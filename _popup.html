@@ -1,0 +1,543 @@
+<div class="bg-layer layer-close"></div>
+<div class="popup-content leave-review" data-rel="leave-review">
+  <div class="btn-close"><img src="./img/icons/modal-close.svg" alt=""></div>
+  <div class="popup-container">
+
+
+    <h2 class="popup-title">LEAVE REVIEW</h2>
+
+    <!-- PRODUCT -->
+    <div class="review-product">
+      <div class="review-product__image">
+        <img src="./img/_temp/detail/2b028422a320cf24a165f087a092247d552b170b.png" alt="">
+      </div>
+      <div class="review-product__info">
+        <div class="review-product__title">Silver ring Vertex</div>
+
+        <!-- STAR RATING -->
+        <div class="review-stars" data-stars>
+          <span data-star="1">★</span>
+          <span data-star="2">★</span>
+          <span data-star="3">★</span>
+          <span data-star="4">★</span>
+          <span data-star="5">★</span>
+        </div>
+
+        <!-- HIDDEN INPUT FOR VALUE -->
+        <input type="hidden" name="rating" id="rating-input" value="">
+      </div>
+    </div>
+    <div class="form-content">
+
+      <div class="form-group stack gap-12 fd-column">
+        <!-- TITLE -->
+        <label class="field-label">REVIEW TITLE</label>
+        <textarea type="text" id="review-title" class="field-textarea" placeholder="Enter a short title"></textarea>
+      </div>
+      <div class="form-group stack gap-12 fd-column">
+        <!-- DESCRIPTION -->
+        <label class="field-label">REVIEW DESCRIPTION</label>
+        <textarea id="review-description" class="field-textarea" placeholder="Describe your experience"></textarea>
+      </div>
+      <div class="form-group stack gap-12 fd-column">
+        <!-- IMAGES -->
+        <label class="field-label">ADD IMAGE</label>
+
+        <label class="upload-area" id="review-upload">
+          <div class="upload-area__inner">
+            <div class="image">
+              <img src="./img/icons/Image.svg" alt="">
+            </div>
+            <div class="upload-area__text">
+              <p class="upload-area__title">Add an image of your idea</p>
+              <p class="upload-area__description"> JPEG, PNG formats up to 15 MB. Or upload one
+                <span class="upload-trigger">from your computer here</span>
+              </p>
+            </div>
+            <input type="file" multiple class="upload-input" accept="image/*">
+          </div>
+        </label>
+
+        <!-- PREVIEW -->
+        <div class="upload-preview" id="upload-preview"></div>
+        <div class="upload-error"></div>
+      </div>
+
+      <div class="form-group stack gap-12 fd-column">
+        <!-- PERSONAL -->
+        <label class="field-label">PERSONAL INFORMATION</label>
+
+        <div class="row">
+          <div class="col">
+            <input type="text" id="review-name" class="field-input" placeholder="Name">
+          </div>
+          <div class="col">
+            <input type="email" id="review-email" class="field-input" placeholder="Email address">
+          </div>
+        </div>
+      </div>
+
+      <!-- ERRORS -->
+      <div class="form-errors" id="review-errors"></div>
+
+      <!-- BUTTONS -->
+      <div class="popup-buttons">
+        <button class="btn button-outlined close-popup">CANCEL</button>
+        <button class="btn button-contained" id="submit-review">SUBMIT</button>
+      </div>
+    </div>
+
+
+  </div>
+</div>
+
+<div class="popup-content engraving-popup" data-rel="engraving-popup">
+  <div class="btn-close">
+    <img src="./img/icons/modal-close.svg" alt="">
+  </div>
+
+  <div class="popup-container">
+    <div class="stack fd-column  gap-32">
+      <div class="stack fd-column text-center gap-16">
+        <h2 class="popup-title">ADD ENGRAVING</h2>
+        <p class="popup-subtitle subtitle">
+          Personalize your piece with a custom engraving — a subtle detail that makes it truly yours.
+        </p>
+      </div>
+
+      <!-- COST OPTIONS -->
+      <div class="engraving-section stack fd-column  gap-12">
+        <label class="field-label">ENGRAVING COSTS</label>
+
+        <div class="stack fd-column   gap-8 ">
+          <label class="radio-box">
+            <input type="radio" name="engravingCost" checked value="20">
+            <span class="radio-mark"></span>
+            One side – $20.00
+          </label>
+
+          <label class="radio-box">
+            <input type="radio" name="engravingCost" value="30">
+            <span class="radio-mark"></span>
+            Both sides – $30.00
+          </label>
+        </div>
+      </div>
+
+      <!-- INSPIRATIONS -->
+      <div class="engraving-section stack fd-column gap-12">
+        <div class="stack fd-column">
+
+          <label class="field-label">ENGRAVING INSPIRATIONS</label>
+          <p class="engraving-description subtitle">
+            Explore examples of engravings made by other customers. Use them as inspiration or choose a design that
+            feels
+            right for you.
+          </p>
+        </div>
+
+        <div class="engraving-gallery">
+          <div class="swiper engraving-swiper">
+            <div class="swiper-wrapper">
+
+              <div class="swiper-slide gallery-item" data-id="1">
+                <img src="./img/_temp/engraving/1ab800ddcb4a3d58d39e04f17ae0fc55b5064eb9.jpg" alt="">
+              </div>
+
+              <div class="swiper-slide gallery-item" data-id="2">
+                <img src="./img/_temp/engraving/image-22223040.jpg" alt="">
+              </div>
+
+              <div class="swiper-slide gallery-item" data-id="3">
+                <img src="./img/_temp/engraving/1ab800ddcb4a3d58d39e04f17ae0fc55b5064eb9.jpg" alt="">
+              </div>
+
+              <div class="swiper-slide gallery-item" data-id="4">
+                <img src="./img/_temp/engraving/image-22223040.jpg" alt="">
+              </div>
+
+              <div class="swiper-slide gallery-item" data-id="5">
+                <img src="./img/_temp/engraving/1ab800ddcb4a3d58d39e04f17ae0fc55b5064eb9.jpg" alt="">
+              </div>
+
+              <div class="swiper-slide gallery-item" data-id="6">
+                <img src="./img/_temp/engraving/image-22223040.jpg" alt="">
+              </div>
+
+            </div>
+
+            <div class="swiper-button-prev engraving-prev"><img src="./img/icons/slider-next.svg" alt=""></div>
+            <div class="swiper-button-next engraving-next"><img src="./img/icons/slider-next.svg" alt=""></div>
+
+          </div>
+
+          <div class="swiper engraving-thumbs">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"></div>
+              <div class="swiper-slide"></div>
+              <div class="swiper-slide"></div>
+              <div class="swiper-slide"></div>
+              <div class="swiper-slide"></div>
+              <div class="swiper-slide"></div>
+
+            </div>
+          </div>
+
+          <input type="hidden" id="engraving-selected" value="">
+        </div>
+
+
+      </div>
+
+      <!-- ENGRAVING TEXT -->
+      <div class="engraving-section stack fd-column gap-12">
+        <label class="field-label">
+          ENTER THE TEXT YOU WANT TO ENGRAVE
+        </label>
+
+        <textarea class="field-textarea" id="engraving-text"
+          placeholder="e.g. Denys · 07/04/2024 · N52°13'47.18&quot;E21°0'42.41&quot; · Everyone is the architect of their own destiny"></textarea>
+      </div>
+
+      <!-- IMAGE UPLOAD -->
+      <div class="form-group stack gap-12 fd-column">
+        <!-- IMAGES -->
+        <label class="field-label">add image for your engrave</label>
+
+        <label class="upload-area" id="review-upload">
+          <div class="upload-area__inner">
+            <div class="image">
+              <img src="./img/icons/Image.svg" alt="">
+            </div>
+            <div class="upload-area__text">
+              <p class="upload-area__title">Add an image of your idea</p>
+              <p class="upload-area__description"> JPEG, PNG formats up to 15 MB. Or upload one
+                <span class="upload-trigger">from your computer here</span>
+              </p>
+            </div>
+            <input type="file" multiple class="upload-input" accept="image/*">
+          </div>
+        </label>
+
+        <!-- PREVIEW -->
+        <div class="upload-preview" id="upload-preview"></div>
+        <div class="upload-error"></div>
+      </div>
+      <!-- BUTTONS -->
+      <div class="popup-buttons">
+        <button class="btn button-outlined close-popup">CANCEL</button>
+        <button class="btn button-contained" id="save-engraving">SAVE ENGRAVING</button>
+      </div>
+    </div>
+
+
+  </div>
+</div>
+
+<div class="popup-content add-to-cart-popup" data-rel="add-to-cart">
+  <div class="btn-close">
+    <img src="./img/icons/modal-close.svg" alt="">
+  </div>
+
+  <div class="popup-container">
+    <div class="popup-inner stack  gap-24">
+
+      <div class="image">
+        <img src="./img/_temp/detail/2b028422a320cf24a165f087a092247d552b170b.png" alt="">
+      </div>
+
+      <div class="content stack fd-column gap-32">
+        <img class="logo" src="./img/images/logo-black.png" alt="">
+        <div class="stack fd-column gap-16">
+          <p class="title">Don’t forget your engraving</p>
+          <p class="text">A subtle detail can tell your story. Add engraving to make it personal and unique.</p>
+        </div>
+
+        <div class="popup-buttons stack fd-column gap-16">
+          <button class="btn button-contained open-popup" data-rel="engraving-popup">Add Engraving</button>
+          <span class="btn button-text close-popup">Skip for now</span>
+        </div>
+      </div>
+
+    </div>
+
+
+  </div>
+</div>
+
+<div class="popup-content size-popup" data-rel="size-popup">
+  <div class="btn-close">
+    <img src="./img/icons/modal-close.svg" alt="">
+  </div>
+
+  <div class="popup-container">
+    <div class="stack fd-column  gap-32">
+      <ul class="tabs">
+        <li>
+          <button class="tab-btn active" data-tab="chart">size chart</button>
+        </li>
+        <li>
+          <button class="tab-btn" data-tab="guide">size guide</button>
+        </li>
+      </ul>
+
+      <!-- TAB CONTENT: chart -->
+      <div class="tab-content active" id="tab-chart">
+        <div class="size-wrapper">
+          <table class="size-table">
+            <tr class="th">
+              <td>Circumference,
+                mm</td>
+              <td>
+                Ring diameter, mm (size on our website)
+              </td>
+              <td>Size PL</td>
+              <td>USA, Canada</td>
+              <td>Europe</td>
+              <td>England, Ireland, Austria, New Zeland</td>
+              <td>Asia (India, China, Japan) & South America</td>
+              <td>Rest of Europe (Italy, Spain, Netherlands, Switzerland)</td>
+            </tr>
+            <tr>
+              <td>50.3</td>
+              <td>16</td>
+              <td>11 size</td>
+              <td>5 1/2</td>
+              <td>50.5</td>
+              <td>k 1/2</td>
+              <td>10</td>
+              <td>10.5</td>
+            </tr>
+            <tr>
+              <td>50.3</td>
+              <td>16</td>
+              <td>11 size</td>
+              <td>5 1/2</td>
+              <td>50.5</td>
+              <td>k 1/2</td>
+              <td>10</td>
+              <td>10.5</td>
+            </tr>
+            <tr>
+              <td>50.3</td>
+              <td>16</td>
+              <td>11 size</td>
+              <td>5 1/2</td>
+              <td>50.5</td>
+              <td>k 1/2</td>
+              <td>10</td>
+              <td>10.5</td>
+            </tr>
+            <tr>
+              <td>50.3</td>
+              <td>16</td>
+              <td>11 size</td>
+              <td>5 1/2</td>
+              <td>50.5</td>
+              <td>k 1/2</td>
+              <td>10</td>
+              <td>10.5</td>
+            </tr>
+            <tr>
+              <td>50.3</td>
+              <td>16</td>
+              <td>11 size</td>
+              <td>5 1/2</td>
+              <td>50.5</td>
+              <td>k 1/2</td>
+              <td>10</td>
+              <td>10.5</td>
+            </tr>
+            <tr>
+              <td>50.3</td>
+              <td>16</td>
+              <td>11 size</td>
+              <td>5 1/2</td>
+              <td>50.5</td>
+              <td>k 1/2</td>
+              <td>10</td>
+              <td>10.5</td>
+            </tr>
+            <tr>
+              <td>50.3</td>
+              <td>16</td>
+              <td>11 size</td>
+              <td>5 1/2</td>
+              <td>50.5</td>
+              <td>k 1/2</td>
+              <td>10</td>
+              <td>10.5</td>
+            </tr>
+            <tr>
+              <td>50.3</td>
+              <td>16</td>
+              <td>11 size</td>
+              <td>5 1/2</td>
+              <td>50.5</td>
+              <td>k 1/2</td>
+              <td>10</td>
+              <td>10.5</td>
+            </tr>
+            <tr>
+              <td>50.3</td>
+              <td>16</td>
+              <td>11 size</td>
+              <td>5 1/2</td>
+              <td>50.5</td>
+              <td>k 1/2</td>
+              <td>10</td>
+              <td>10.5</td>
+            </tr>
+            <tr>
+              <td>50.3</td>
+              <td>16</td>
+              <td>11 size</td>
+              <td>5 1/2</td>
+              <td>50.5</td>
+              <td>k 1/2</td>
+              <td>10</td>
+              <td>10.5</td>
+            </tr>
+            <tr>
+              <td>50.3</td>
+              <td>16</td>
+              <td>11 size</td>
+              <td>5 1/2</td>
+              <td>50.5</td>
+              <td>k 1/2</td>
+              <td>10</td>
+              <td>10.5</td>
+            </tr>
+            <tr>
+              <td>50.3</td>
+              <td>16</td>
+              <td>11 size</td>
+              <td>5 1/2</td>
+              <td>50.5</td>
+              <td>k 1/2</td>
+              <td>10</td>
+              <td>10.5</td>
+            </tr>
+            <tr>
+              <td>50.3</td>
+              <td>16</td>
+              <td>11 size</td>
+              <td>5 1/2</td>
+              <td>50.5</td>
+              <td>k 1/2</td>
+              <td>10</td>
+              <td>10.5</td>
+            </tr>
+            <tr>
+              <td>50.3</td>
+              <td>16</td>
+              <td>11 size</td>
+              <td>5 1/2</td>
+              <td>50.5</td>
+              <td>k 1/2</td>
+              <td>10</td>
+              <td>10.5</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="tab-content" id="tab-guide">
+        <div class="content-box">
+          <div class="container">
+            <div class="content-box__content">
+              <div class="stack fd-column gap-40">
+                <div class="stack fd-column gap-24">
+                  <h2 class="h2">How to measure your ring size</h2>
+                  <div class="text">
+                    <ul class="list">
+                      <li>Use a thread or ribbon and wrap it around the base of your finger. The thread or ribbon should
+                        be thin enough to
+                        accurately follow the contour of your finger. Ensure the thread or ribbon lies snugly against
+                        the skin without
+                        constricting your finger.</li>
+                      <li>Mark the point where the end of the thread or ribbon meets the rest of the thread or ribbon.
+                      </li>
+                      <li>Orders are processed and shipped within 7 business days.</li>
+                      <li>Shipping is via DHL and typically takes 2-3 business days from the shipping date.</li>
+
+                    </ul>
+                  </div>
+
+
+                </div>
+
+                <div class="stack fd-column gap-24">
+                  <h2 class="h2">tips</h2>
+                  <div class="text">
+                    <ol class="list">
+                      <li>Measure your finger at the end of the day.</li>
+                      <li>Do not measure if your hands are too cold or too warm.</li>
+                      <li>Keep in mind that the fingers on both hands can be slightly different sizes.</li>
+
+                    </ol>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="content-box__image">
+              <picture>
+                <source srcset="./img/_temp/1b97aba38f0d6465743f9d15b22e219de2555d87.png" type="image/jpeg" />
+                <img src="./img/_temp/1b97aba38f0d6465743f9d15b22e219de2555d87.png" alt="Опис зображення" loading="lazy"
+                  width="990" height="1010">
+              </picture>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+  </div>
+</div>
+
+
+
+
+<div class="cart-overlay"></div>
+
+<div class="cart-drawer" id="cartDrawer">
+  <div class="cart-header">
+    <h3>Cart</h3>
+    <button class="close-cart">&times;</button>
+  </div>
+
+  <!-- EMPTY STATE -->
+  <div class="cart-empty">
+    <p>Your cart is empty</p>
+  </div>
+
+  <!-- ITEMS -->
+  <div class="cart-body">
+    <div class="cart-item">
+      <img src="https://via.placeholder.com/80" alt="">
+      <div class="cart-item-info">
+        <div class="title">Silver bracelet</div>
+        <div class="price">$304.00</div>
+
+        <div class="qty">
+          <button class="qty-minus button">−</button>
+          <input type="number" value="1" min="1">
+          <button class="qty-plus button">+</button>
+        </div>
+
+        <button class="remove-item">Remove</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="cart-footer">
+    <div class="subtotal">
+      <span>Subtotal</span>
+      <strong>$304.00</strong>
+    </div>
+    <button class="checkout-btn">Checkout</button>
+  </div>
+</div>
