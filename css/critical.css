@@ -895,6 +895,7 @@ html:not(.touch-screen)::-webkit-scrollbar-thumb {
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 2px;
+    align-content: flex-start;
   }
   .product-detail__photos .swiper-slide {
     height: auto;
@@ -1224,7 +1225,7 @@ html:not(.touch-screen)::-webkit-scrollbar-thumb {
     overflow: hidden;
   }
   .product-detail__thumbs .swiper-slide {
-    width: 52px;
+    width: 52px !important;
     height: 2px;
     opacity: 0.2;
     background-color: #fff;

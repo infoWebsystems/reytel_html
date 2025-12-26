@@ -481,8 +481,13 @@ $(document).ready(function () {
     }
   });
   $(".header-navigation > li > a").click(function (e) {
-    e.preventDefault();
-    $(this).closest("li").addClass("active");
+    if (
+      $(window).width() <= 768 &&
+      $(this).closest("li").find(".sub-menu").length
+    ) {
+      e.preventDefault();
+      $(this).closest("li").addClass("active");
+    }
   });
   $(".sub-menu__header").click(function (e) {
     e.preventDefault();
@@ -560,7 +565,7 @@ function initHeroSlider() {
       watchSlidesProgress: true,
       slideToClickedSlide: true,
       centeredSlides: false,
-      centerInsufficientSlides: false,
+      centerInsufficientSlides: true,
     });
 
     // Основний слайдер
