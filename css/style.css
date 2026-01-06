@@ -229,6 +229,7 @@
   text-transform: uppercase;
   max-width: 150px;
   cursor: pointer;
+  color: var(--text-color-black);
 }
 
 .footer-bottom {
@@ -1833,6 +1834,17 @@
 .size-popup .content-box .container {
   padding: 0;
   justify-content: space-between;
+}
+
+.product-cards__card {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  height: auto !important;
+}
+
+.product-cards__card .product-cards__prices {
+  margin-top: auto;
 }
 
 @media (max-width: 1200px) {

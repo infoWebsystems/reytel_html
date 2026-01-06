@@ -565,14 +565,15 @@ function initHeroSlider() {
       watchSlidesProgress: true,
       slideToClickedSlide: true,
       centeredSlides: false,
-      centerInsufficientSlides: true,
+      centerInsufficientSlides: false,
+      // loop: true,
     });
 
     // Основний слайдер
     mainSwiper = new Swiper(".hero-slider", {
       slidesPerView: 1,
       spaceBetween: 8,
-
+      // loop: true,
       thumbs: {
         swiper: thumbsSwiper,
       },
