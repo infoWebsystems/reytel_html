@@ -1724,12 +1724,6 @@
 }
 
 .size-popup {
-}
-.size-popup {
-}
-.size-popup {
-}
-.size-popup {
   max-width: 1230px;
 }
 
@@ -1847,6 +1841,38 @@
   margin-top: auto;
 }
 
+.cart-content {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+  gap: 24px;
+  align-items: flex-start;
+}
+.cart-content .cart-footer {
+  width: 33%;
+  padding: 20px;
+  background-color: #f6f7f9;
+  display: flex !important;
+  flex-direction: column;
+  gap: 24px;
+}
+.page-cart {
+  padding: 60px 0;
+}
+
+.cart-content .cart-footer .subtitle {
+  font-size: 18px;
+  font-weight: 500;
+}
+.cart-content .subtotal > * {
+  font-family: "Tektur", sans-serif;
+}
+.cart-content .description p {
+  font-size: 14px;
+  line-height: 1.55;
+}
+
 @media (max-width: 1200px) {
   .review-card {
     width: calc(33.333% - 16px);
@@ -1857,11 +1883,29 @@
   .review-card {
     width: calc(50% - 12px);
   }
+  .cart-content {
+    flex-direction: column;
+    gap: 24px;
+  }
+  .cart-content .cart-footer,
+  .cart-content .cart-body {
+    flex: none;
+    width: 100%;
+  }
 }
 
 @media (max-width: 600px) {
   .review-card {
     width: 100%; /* 1 колонка */
+  }
+  .cart-content .cart-body {
+    padding: 0;
+  }
+  .cart-content .button-outlined {
+    height: 52px;
+    padding: 5px 24px;
+    font-size: 14px;
+    width: 100%;
   }
 }
 

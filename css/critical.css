@@ -31,6 +31,12 @@ ol {
   --box-shadow: 0 0 1.5rem 0 rgba(0, 0, 0, 0.03),
     0 0 0.5rem 0 rgba(0, 0, 0, 0.06);
   --transition-1: 0.3s ease;
+
+  --sp-xl: 5.5rem;
+  --sp-lg: 2rem;
+  --sp-md: 1.5rem;
+  --sp-sm: 1.5rem;
+  --sp-xs: 1rem;
 }
 
 #loader {
