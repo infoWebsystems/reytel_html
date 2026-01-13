@@ -115,20 +115,22 @@ jQuery(function ($) {
       var containerHeight = $container.outerHeight();
       var contentHeight = $content.outerHeight();
 
-      var maxTop = containerHeight - contentHeight - 24;
+      var maxTop = containerHeight - contentHeight;
 
       if (
         scrollTop + stickyOffset >= containerTop &&
-        scrollTop + stickyOffset <= containerTop + maxTop - 24
+        scrollTop + stickyOffset <= containerTop + maxTop
       ) {
         $content.addClass("is-sticky");
         $content.css("top", stickyOffset + "px");
-      } else if (scrollTop + stickyOffset > containerTop + maxTop) {
+      } else if (scrollTop + stickyOffset >= containerTop + maxTop) {
         $content.removeClass("is-sticky");
         $content.css("top", maxTop + "px");
       } else {
         $content.removeClass("is-sticky");
-        $content.css("top", 0);
+        // $content.addClass("is-sticky");
+        // $content.css("top", 0);
+        $content.css("top", maxTop + "px");
       }
     }
 

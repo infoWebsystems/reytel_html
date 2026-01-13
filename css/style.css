@@ -11,7 +11,7 @@
   padding: 15px;
   visibility: hidden;
   opacity: 0;
-  height: 100%;
+  height: 100vh;
   overflow: auto;
   background: var(--bg-overlay);
   -webkit-backdrop-filter: var(--blur);
@@ -26,8 +26,8 @@
   position: absolute;
   left: 0;
   right: 0;
-  top: -6.25rem;
-  bottom: -6.25rem;
+  top: 0;
+  bottom: 0;
 
   opacity: 0;
   transition: opacity var(--transition-1);
@@ -44,16 +44,16 @@
 }
 
 .popup-content {
-  position: absolute;
+  position: relative;
   width: 100%;
-  margin: auto;
+  margin: 0 auto;
   font-size: 0;
   text-align: center;
   letter-spacing: 0;
   padding: 40px 32px;
   overflow: auto;
-  -webkit-overflow-scrolling: touch;
-  backface-visibility: hidden;
+  /* -webkit-overflow-scrolling: touch;
+  backface-visibility: hidden; */
   opacity: 0;
   visibility: hidden;
   transform: translateY(6.25rem);
@@ -62,12 +62,15 @@
   z-index: 2;
   left: 0;
   right: 0;
+  top: 0;
+  display: none;
 }
 
 .popup-content.active {
   transform: translateY(0%);
   opacity: 1;
   visibility: visible;
+  display: block;
 }
 .popup-content .btn-close {
   position: absolute;
