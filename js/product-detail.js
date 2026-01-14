@@ -246,6 +246,8 @@ function stickyBottomInfoProduct() {
 
   if ($sticky.length === 0 || $buttons.length === 0) return;
 
+  let lastScrollTop = 0;
+
   function updateSticky() {
     const scrollTop = $(window).scrollTop();
     const buttonsBottom = $buttons.offset().top + $buttons.outerHeight();
@@ -256,7 +258,11 @@ function stickyBottomInfoProduct() {
 
     const footerVisible = windowBottom >= footerTop;
 
-    if (scrollTop >= buttonsBottom && !footerVisible) {
+    const scrollingDown = scrollTop > lastScrollTop;
+    lastScrollTop = scrollTop;
+
+  
+    if (scrollTop >= buttonsBottom && !footerVisible && !scrollingDown) {
       $sticky.addClass("active");
     } else {
       $sticky.removeClass("active");
