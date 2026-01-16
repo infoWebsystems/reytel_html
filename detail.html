@@ -27,6 +27,7 @@
     <meta name="description" content="Jewelry" />
 
     <script defer src="js/product-detail.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/fancybox/fancybox.css" />
 </head>
 
 <body class="home-page">
@@ -226,8 +227,8 @@
                         </a>
                     </li>
                     <li>
-                        <a href="" data-open-cart>
-                            <img src="./img/icons/cart.svg" alt="">
+                        <a href="" class="user">
+                            <img src="./img/icons/user.svg" alt="">
                         </a>
                     </li>
                     <li class="show-mobile">
@@ -254,7 +255,42 @@
             <div class="container">
                 <div class="product-detail__photos swiper product-detail__slider">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide product-detail__photo">
+                        <a class="swiper-slide product-detail__photo"
+                            href="./img/_temp/detail/2b028422a320cf24a165f087a092247d552b170b.png"
+                            data-fancybox="gallery">
+                            <picture>
+                                <source srcset="./img/_temp/detail/2b028422a320cf24a165f087a092247d552b170b.png"
+                                    type="image/jpeg" />
+                                <img src="./img/_temp/detail/2b028422a320cf24a165f087a092247d552b170b.png"
+                                    alt="Опис зображення" loading="lazy" width="550" height="680">
+                            </picture>
+                        </a>
+
+                        <a class="swiper-slide product-detail__photo"
+                            href="./img/_temp/detail/30bb801c210eeacbd39ee77bef763207a5c644d2.png"
+                            data-fancybox="gallery">
+                            <picture>
+                                <source srcset="./img/_temp/detail/30bb801c210eeacbd39ee77bef763207a5c644d2.png"
+                                    type="image/jpeg" />
+                                <img src="./img/_temp/detail/30bb801c210eeacbd39ee77bef763207a5c644d2.png"
+                                    alt="Опис зображення" loading="lazy" width="550" height="680">
+                            </picture>
+                        </a>
+
+                        <a class="swiper-slide product-detail__photo"
+                            href="//reytel-jewelry.com/cdn/shop/videos/c/vp/326e05691bd04a2a9c3d5ebf91acf084/326e05691bd04a2a9c3d5ebf91acf084.HD-1080p-2.5Mbps-41756729.mp4?v=0"
+                            data-fancybox="gallery">
+                            <video playsinline loop muted autoplay controlslist="nodownload"
+                                poster="//reytel-jewelry.com/cdn/shop/files/preview_images/326e05691bd04a2a9c3d5ebf91acf084.thumbnail.0000000000_740x.jpg?v=1738156045"
+                                class="product__video">
+                                <source
+                                    src="//reytel-jewelry.com/cdn/shop/videos/c/vp/326e05691bd04a2a9c3d5ebf91acf084/326e05691bd04a2a9c3d5ebf91acf084.HD-1080p-2.5Mbps-41756729.mp4?v=0"
+                                    type="video/mp4" />
+                            </video>
+                        </a>
+                        <div class="swiper-slide product-detail__photo"
+                            href="./img/_temp/detail/30bb801c210eeacbd39ee77bef763207a5c644d2.png"
+                            data-fancybox="gallery">
                             <picture>
                                 <source srcset="./img/_temp/detail/2b028422a320cf24a165f087a092247d552b170b.png"
                                     type="image/jpeg" />
@@ -289,37 +325,6 @@
                                     alt="Опис зображення" loading="lazy" width="550" height="680">
                             </picture>
                         </div>
-
-                        <div class="swiper-slide product-detail__photo">
-                            <picture>
-                                <source srcset="./img/_temp/detail/30bb801c210eeacbd39ee77bef763207a5c644d2.png"
-                                    type="image/jpeg" />
-                                <img src="./img/_temp/detail/30bb801c210eeacbd39ee77bef763207a5c644d2.png"
-                                    alt="Опис зображення" loading="lazy" width="550" height="680">
-                            </picture>
-                        </div>
-
-                        <div class="swiper-slide product-detail__photo">
-                            <video playsinline loop muted autoplay controlslist="nodownload"
-                                poster="//reytel-jewelry.com/cdn/shop/files/preview_images/326e05691bd04a2a9c3d5ebf91acf084.thumbnail.0000000000_740x.jpg?v=1738156045"
-                                class="product__video">
-                                <source
-                                    src="//reytel-jewelry.com/cdn/shop/videos/c/vp/326e05691bd04a2a9c3d5ebf91acf084/326e05691bd04a2a9c3d5ebf91acf084.HD-1080p-2.5Mbps-41756729.mp4?v=0"
-                                    type="video/mp4" />
-                            </video>
-                        </div>
-                        <div class="swiper-slide product-detail__photo">
-                            <picture>
-                                <source srcset="./img/_temp/detail/2b028422a320cf24a165f087a092247d552b170b.png"
-                                    type="image/jpeg" />
-                                <img src="./img/_temp/detail/2b028422a320cf24a165f087a092247d552b170b.png"
-                                    alt="Опис зображення" loading="lazy" width="550" height="680">
-                            </picture>
-                        </div>
-
-
-
-
 
                     </div>
 
@@ -335,8 +340,6 @@
 
                 <div class="product-detail__content">
                     <div class="stack fd-column gap-40 sticky-content">
-
-
                         <nav class="breadcrumbs ">
                             <div class="container">
                                 <ul>
@@ -351,8 +354,6 @@
                                     <li>
                                         <span>Bracelets</span>
                                     </li>
-
-
                                 </ul>
                             </div>
                         </nav>
@@ -1686,11 +1687,12 @@
 
     <script src="js/jquery-3.6.0.min.js"></script>
     <script defer src="js/swiper-bundle.min.js"></script>
-    <script src="js/fancybox.umd.js"></script>
 
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/fancybox/fancybox.umd.js"></script>
     <script defer src="js/main.js"></script>
-
-
+    <script>
+        Fancybox.bind('[data-fancybox]', {});    
+    </script>
 </body>
 
 </html>
