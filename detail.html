@@ -360,7 +360,10 @@
 
                         <div class="stack fd-column gap-24">
 
-                            <h1 class="h2">Silver ring Vertex</h1>
+                            <div>
+                                <h1 class="h2">Silver ring Vertex</h1>
+                                <p class="sku">S12-123123-3</p>
+                            </div>
 
                             <div class="stack fd-row justify-content-between">
                                 <div class="stack gap-12 fd-row align-items-center">
@@ -1263,7 +1266,7 @@
             </div>
 
             <div class="popup-container">
-                <div class="stack fd-column  gap-32">
+                <form class="stack fd-column  gap-32">
                     <div class="stack fd-column text-center gap-16">
                         <h2 class="popup-title">ADD ENGRAVING</h2>
                         <p class="popup-subtitle subtitle">
@@ -1376,7 +1379,7 @@
                         <!-- IMAGES -->
                         <label class="field-label">add image for your engrave</label>
 
-                        <label class="upload-area" id="review-upload">
+                        <label class="upload-area" id="review-upload" data-max-files="2">
                             <div class="upload-area__inner">
                                 <div class="image">
                                     <img src="./img/icons/Image.svg" alt="">
@@ -1395,12 +1398,14 @@
                         <div class="upload-preview" id="upload-preview"></div>
                         <div class="upload-error"></div>
                     </div>
+
+                    <div class="form-error" style="display:none;"></div>                    
                     <!-- BUTTONS -->
                     <div class="popup-buttons">
                         <button class="btn button-outlined close-popup">CANCEL</button>
-                        <button class="btn button-contained" id="save-engraving">SAVE ENGRAVING</button>
+                        <button class="btn button-contained" type="submit" id="save-engraving">SAVE ENGRAVING</button>
                     </div>
-                </div>
+                </form>
 
 
             </div>

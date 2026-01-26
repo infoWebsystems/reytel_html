@@ -213,6 +213,52 @@ jQuery(function ($) {
     _functions.closePopup();
   });
   uploadFiles();
+
+
+
+    $('#save-engraving').on('click', function (e) {
+        e.preventDefault();
+
+        const errorBox = $('.form-error');
+        errorBox.hide().text('');
+
+        let errors = [];
+
+        // 1️⃣ engraving text
+        if (!$('#engraving-text').val().trim()) {
+            errors.push('Please enter engraving text.');
+        }
+
+        // 2️⃣ selected inspiration (optional — якщо треба)
+        // if (!$('#engraving-selected').val()) {
+        //     errors.push('Please select an engraving inspiration.');
+        // }
+
+        // 3️⃣ uploaded images
+        let uploadedCount = 0;
+        $('.upload-preview .preview-item').each(function () {
+            uploadedCount++;
+        });
+
+        if (uploadedCount === 0) {
+            errors.push('Please upload at least one image.');
+        }
+
+        // if (uploadedCount > MAX_IMAGES) {
+        //     errors.push(`You can upload maximum ${MAX_IMAGES} images.`);
+        // }
+
+        // ❌ якщо є помилки
+        if (errors.length) {
+            errorBox
+                .html(errors.join('<br>'))
+                .slideDown();
+            return;
+        }
+
+        // ✅ якщо все ок — сабміт
+        $(this).closest('form')[0].submit();
+    });  
 });
 
 function resetReviewForm() {
@@ -636,26 +682,59 @@ function uploadFiles() {
   // ============================
   // HANDLE FILES FOR INSTANCE
   // ============================
-  function handleFiles(area, files) {
-    const inst = uploadInstances.get(area[0]);
+  // function handleFiles(area, files) {
+  //   const inst = uploadInstances.get(area[0]);
 
-    for (let file of files) {
-      // Валідація типу
-      if (!file.type.match("image.*")) {
-        showUploadError(area, "File must be an image");
-        continue;
-      }
+  //   for (let file of files) {
+  //     // Валідація типу
+  //     if (!file.type.match("image.*")) {
+  //       showUploadError(area, "File must be an image");
+  //       continue;
+  //     }
 
-      // Валідація розміру ≤ 15MB
-      if (file.size > 15 * 1024 * 1024) {
-        showUploadError(area, "Maximum file size is 15 MB");
-        continue;
-      }
+  //     // Валідація розміру ≤ 15MB
+  //     if (file.size > 15 * 1024 * 1024) {
+  //       showUploadError(area, "Maximum file size is 15 MB");
+  //       continue;
+  //     }
 
-      let index = inst.files.push(file) - 1;
-      addPreview(inst, file, index);
+  //     let index = inst.files.push(file) - 1;
+  //     addPreview(inst, file, index);
+  //   }
+  // }
+
+function handleFiles(area, files) {
+  const inst = uploadInstances.get(area[0]);
+  const maxFiles = parseInt(area.data("max-files"), 10) || Infinity;
+
+  let currentCount = inst.files.filter(f => f !== null).length;
+
+  for (let file of files) {
+
+    // ⛔ ліміт
+    if (currentCount >= maxFiles) {
+      showUploadError(area, `Maximum ${maxFiles} images allowed`);
+      break;
     }
+
+    // тип
+    if (!file.type.match("image.*")) {
+      showUploadError(area, "File must be an image");
+      continue;
+    }
+
+    // розмір
+    if (file.size > 15 * 1024 * 1024) {
+      showUploadError(area, "Maximum file size is 15 MB");
+      continue;
+    }
+
+    inst.files.push(file);
+    addPreview(inst, file, inst.files.length - 1);
+    currentCount++; // 🔥 КЛЮЧОВЕ
   }
+}
+
 
   // ============================
   // PREVIEW
@@ -868,6 +947,9 @@ function catalogFilters() {
       track.noUiSlider.set([null, this.value]);
     });
   });
+
+
+
 }
 
 $(document).ready(function () {

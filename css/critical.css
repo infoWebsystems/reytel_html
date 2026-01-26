@@ -516,6 +516,11 @@ html:not(.touch-screen)::-webkit-scrollbar-thumb {
   max-width: 500px;
 }
 
+.product-detail__content .sku{
+  font-size: 16px;
+  color: var(--label-color);
+}
+
 .size-box__header-label {
   font-size: 14px;
   line-height: 22px;
@@ -1319,6 +1324,9 @@ html:not(.touch-screen)::-webkit-scrollbar-thumb {
 }
 
 @media (max-width: 550px) {
+.product-detail__content .sku{
+  font-size: 14px; 
+}  
   .hero-slider .content {
     padding: 55% 20px 55px;
   }
