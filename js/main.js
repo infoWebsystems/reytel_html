@@ -1,5 +1,5 @@
 var _functions = {},
-  winWidth;
+  winWidth,popupTop;
 let uploadedFiles = [];
 
 jQuery(function ($) {
