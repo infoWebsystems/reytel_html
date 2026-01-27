@@ -1841,9 +1841,36 @@
   flex-direction: column;
   height: auto !important;
 }
-
+.product-cards__card .product__video{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
 .product-cards__card .product-cards__prices {
   margin-top: auto;
+}
+.product-cards__card{
+  position: relative;
+}
+.product-cards__card .tags{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 5;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.product-cards__card .badge{
+  font-size: 14px;
+  color: #fff;
+  padding: 4px 10px;
+  background-color: var(--text-color-black);
+ 
 }
 
 .cart-content {

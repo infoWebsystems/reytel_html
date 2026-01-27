@@ -175,6 +175,7 @@ jQuery(function ($) {
     const engravingThumbs = new Swiper(".engraving-thumbs", {
       slidesPerView: 4,
       spaceBetween: 8,
+      initialSlide: 1,
       watchSlidesProgress: true,
       slideToClickedSlide: true,
       centerInsufficientSlides: true,
@@ -184,6 +185,7 @@ jQuery(function ($) {
     // MAIN SLIDER
     const engravingSwiper = new Swiper(".engraving-swiper", {
       slidesPerView: 3,
+      initialSlide: 1,
       spaceBetween: 46,
       centeredSlides: true,
       loop: true,
