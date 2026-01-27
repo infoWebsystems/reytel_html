@@ -1856,6 +1856,9 @@
 .product-cards__card{
   position: relative;
 }
+.product-cards__badge{
+  font-size: 14px;
+}
 .product-cards__card .tags{
   position: absolute;
   top: 10px;
