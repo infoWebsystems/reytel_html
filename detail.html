@@ -1266,7 +1266,9 @@
             </div>
 
             <div class="popup-container">
-                <form class="stack fd-column  gap-32">
+                <form class="stack fd-column  gap-32"       
+                    data-error-text-required="Please enter engraving text."
+                     data-error-image-required="Please upload at least one image.">
                     <div class="stack fd-column text-center gap-16">
                         <h2 class="popup-title">ADD ENGRAVING</h2>
                         <p class="popup-subtitle subtitle">
@@ -1379,7 +1381,12 @@
                         <!-- IMAGES -->
                         <label class="field-label">add image for your engrave</label>
 
-                        <label class="upload-area" id="review-upload" data-max-files="2">
+                            <label class="upload-area"
+                                id="review-upload"
+                                data-max-files="2"
+                                data-error-type="File must be an image"
+                                data-error-size="Maximum file size is 15 MB"
+                                data-error-limit="Maximum {max} images allowed">
                             <div class="upload-area__inner">
                                 <div class="image">
                                     <img src="./img/icons/Image.svg" alt="">

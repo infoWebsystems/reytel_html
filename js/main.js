@@ -1,5 +1,6 @@
 var _functions = {},
-  winWidth,popupTop;
+  winWidth,
+  popupTop;
 let uploadedFiles = [];
 
 jQuery(function ($) {
@@ -61,7 +62,7 @@ jQuery(function ($) {
   _functions.openPopup = function (popupKey) {
     $(".popup-content").removeClass("active");
     $(".popup-content[data-rel='" + popupKey + "'], .popup-wrapper").addClass(
-      "active"
+      "active",
     );
 
     removeScroll();
@@ -87,7 +88,7 @@ jQuery(function ($) {
     function (e) {
       e.preventDefault();
       _functions.closePopup();
-    }
+    },
   );
 
   $(document).on("click", ".mobile-burger", function (e) {
@@ -214,51 +215,53 @@ jQuery(function ($) {
   });
   uploadFiles();
 
+  $("#save-engraving").on("click", function (e) {
+    e.preventDefault();
 
+    const $form = $(this).closest("form");
+    const errors = _functions.validateEngravingForm($form);
 
-    $('#save-engraving').on('click', function (e) {
-        e.preventDefault();
+    _functions.showFormErrors(errors, $form);
 
-        const errorBox = $('.form-error');
-        errorBox.hide().text('');
+    if (!errors.length) {
+      $form[0].submit();
+    }
+  });
 
-        let errors = [];
+  _functions.showFormErrors = function (errors, $form) {
+    const errorBox = $form.find(".form-error");
 
-        // 1️⃣ engraving text
-        if (!$('#engraving-text').val().trim()) {
-            errors.push('Please enter engraving text.');
-        }
+    if (!errors.length) {
+      errorBox.hide().empty();
+      return;
+    }
 
-        // 2️⃣ selected inspiration (optional — якщо треба)
-        // if (!$('#engraving-selected').val()) {
-        //     errors.push('Please select an engraving inspiration.');
-        // }
+    errorBox.html(errors.join("<br>")).slideDown();
+  };
 
-        // 3️⃣ uploaded images
-        let uploadedCount = 0;
-        $('.upload-preview .preview-item').each(function () {
-            uploadedCount++;
-        });
+  _functions.validateEngravingForm = function ($form) {
+    const errors = [];
 
-        if (uploadedCount === 0) {
-            errors.push('Please upload at least one image.');
-        }
+    const textRequiredMsg =
+      $form.data("error-text-required") || "Text is required.";
 
-        // if (uploadedCount > MAX_IMAGES) {
-        //     errors.push(`You can upload maximum ${MAX_IMAGES} images.`);
-        // }
+    const imageRequiredMsg =
+      $form.data("error-image-required") || "Image is required.";
 
-        // ❌ якщо є помилки
-        if (errors.length) {
-            errorBox
-                .html(errors.join('<br>'))
-                .slideDown();
-            return;
-        }
+    // 1️⃣ engraving text
+    const text = $form.find("#engraving-text").val()?.trim();
+    if (!text) {
+      errors.push(textRequiredMsg);
+    }
 
-        // ✅ якщо все ок — сабміт
-        $(this).closest('form')[0].submit();
-    });  
+    // 2️⃣ uploaded images
+    const uploadedCount = $form.find(".upload-preview .preview-item").length;
+    if (uploadedCount === 0) {
+      errors.push(imageRequiredMsg);
+    }
+
+    return errors;
+  };
 });
 
 function resetReviewForm() {
@@ -338,7 +341,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     {
       threshold: 0.2,
-    }
+    },
   );
 
   cardSliders.forEach((slider) => observer.observe(slider));
@@ -703,38 +706,36 @@ function uploadFiles() {
   //   }
   // }
 
-function handleFiles(area, files) {
-  const inst = uploadInstances.get(area[0]);
-  const maxFiles = parseInt(area.data("max-files"), 10) || Infinity;
+  function handleFiles(area, files) {
+    const inst = uploadInstances.get(area[0]);
+    const maxFiles = parseInt(area.data("max-files"), 10) || Infinity;
 
-  let currentCount = inst.files.filter(f => f !== null).length;
+    let currentCount = inst.files.filter((f) => f !== null).length;
 
-  for (let file of files) {
+    for (let file of files) {
+      // ⛔ ліміт
+      if (currentCount >= maxFiles) {
+        showUploadError(area, getUploadError(area, "limit", { max: maxFiles }));
+        break;
+      }
 
-    // ⛔ ліміт
-    if (currentCount >= maxFiles) {
-      showUploadError(area, `Maximum ${maxFiles} images allowed`);
-      break;
+      // ⛔ тип
+      if (!file.type.match("image.*")) {
+        showUploadError(area, getUploadError(area, "type"));
+        continue;
+      }
+
+      // ⛔ розмір
+      if (file.size > 15 * 1024 * 1024) {
+        showUploadError(area, getUploadError(area, "size"));
+        continue;
+      }
+
+      inst.files.push(file);
+      addPreview(inst, file, inst.files.length - 1);
+      currentCount++;
     }
-
-    // тип
-    if (!file.type.match("image.*")) {
-      showUploadError(area, "File must be an image");
-      continue;
-    }
-
-    // розмір
-    if (file.size > 15 * 1024 * 1024) {
-      showUploadError(area, "Maximum file size is 15 MB");
-      continue;
-    }
-
-    inst.files.push(file);
-    addPreview(inst, file, inst.files.length - 1);
-    currentCount++; // 🔥 КЛЮЧОВЕ
   }
-}
-
 
   // ============================
   // PREVIEW
@@ -793,6 +794,16 @@ function handleFiles(area, files) {
   initUploaders();
 }
 
+function getUploadError(area, type, vars = {}) {
+  let msg = area.data(`error-${type}`) || "Upload error";
+
+  Object.keys(vars).forEach((key) => {
+    msg = msg.replace(`{${key}}`, vars[key]);
+  });
+
+  return msg;
+}
+
 function catalogFilters() {
   const $selectedFilters = $(".catalog-filter__bottom .selected-filters");
   const $bottom = $(".catalog-filter__bottom");
@@ -835,7 +846,7 @@ function catalogFilters() {
 
     const baseTitle = "filters";
     $(".modal-filter__header-title").text(
-      selectedCount > 0 ? `${baseTitle} (${selectedCount})` : baseTitle
+      selectedCount > 0 ? `${baseTitle} (${selectedCount})` : baseTitle,
     );
   }
 
@@ -876,8 +887,8 @@ function catalogFilters() {
       $(".selected-filters").append(`
         <div class="selected-tag" data-value="${value}">
           ${label} <span class="remove-tag"><img src="${
-        isMobile ? "./img/icons/close-white.svg" : "./img/icons/remove.svg"
-      }"></span>
+            isMobile ? "./img/icons/close-white.svg" : "./img/icons/remove.svg"
+          }"></span>
         </div>
       `);
     } else {
@@ -947,9 +958,6 @@ function catalogFilters() {
       track.noUiSlider.set([null, this.value]);
     });
   });
-
-
-
 }
 
 $(document).ready(function () {
@@ -966,7 +974,7 @@ $(document).ready(function () {
       .closest(".filter-item")
       .find(".filter-toggle")
       .html(
-        `Sort by: <span>${text}</span> <img src="./img/icons/caret-down-black.svg" alt="">`
+        `Sort by: <span>${text}</span> <img src="./img/icons/caret-down-black.svg" alt="">`,
       );
 
     $(this).parent().hide();
