@@ -224,7 +224,10 @@ jQuery(function ($) {
     _functions.showFormErrors(errors, $form);
 
     if (!errors.length) {
-      $form[0].submit();
+        const formEl = $form[0];
+        if (formEl && typeof formEl.requestSubmit === "function") {
+          formEl.requestSubmit();
+        }
     }
   });
 
