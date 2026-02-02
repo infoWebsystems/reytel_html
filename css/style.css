@@ -488,7 +488,7 @@
 }
 .product-card__inner-slider {
   position: relative;
-  margin-bottom: 16px;
+  margin:0 0  16px 0!important;
   overflow: hidden;
 }
 .product-card__inner-slider .swiper-slide {
