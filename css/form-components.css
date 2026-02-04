@@ -99,7 +99,7 @@ select.custom-select {
 }
 
 .select-wrap label:before {
-  background-image: url("/cdn/shop/t/10/assets/caret-down-black.svg");
+  background-image: url("caret-down-black.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 18px;

@@ -116,7 +116,7 @@
   top: 50%;
   width: 16px;
   height: 16px;
-  background: url("/cdn/shop/t/10/assets/caret-down-black.svg") center no-repeat;
+  background: url("caret-down-black.svg") center no-repeat;
   background-size: 16px;
   margin-top: -8px;
 }
