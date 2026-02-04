@@ -151,17 +151,17 @@ select.custom-select:disabled {
   background-color: transparent;
 }
 .custom-popover-select .custom-popover-select__icon {
-  background-image: url("./img/icons/caret-down-black.svg");
+  /* background-image: url("./img/icons/caret-down-black.svg");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 18px;
+  background-size: 18px; */
   position: absolute;
   width: 18px;
   height: 18px;
   right: 14px;
   top: 50%;
   transform: translateY(-50%);
-  content: "";
+  /* content: ""; */
   z-index: 2;
 }
 /* Icon rotation when open */
