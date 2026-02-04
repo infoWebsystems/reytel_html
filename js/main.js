@@ -224,10 +224,10 @@ jQuery(function ($) {
     _functions.showFormErrors(errors, $form);
 
     if (!errors.length) {
-        const formEl = $form[0];
-        if (formEl && typeof formEl.requestSubmit === "function") {
-          formEl.requestSubmit();
-        }
+      const formEl = $form[0];
+      if (formEl && typeof formEl.requestSubmit === "function") {
+        formEl.requestSubmit();
+      }
     }
   });
 
@@ -414,7 +414,13 @@ $(document).ready(function () {
   // --- Selecting a size row ---
   $rows.on("click", function () {
     const value = $(this).data("value");
-    const text = $(this).find("span").text().trim();
+    const text = $(this)
+      .find("span")
+      .map(function () {
+        return $(this).text().trim();
+      })
+      .get()
+      .join("  ");
 
     // set label
     $label.text(text);
@@ -498,16 +504,28 @@ $(document).ready(function () {
 
 $(document).ready(function () {
   $(".accordeon-item__header").click(function () {
-    const $item = $(this).parent(); // поточний елемент
-    const $content = $(this).next(".accordeon-item__content");
+    const $header = $(this);
+    const $item = $header.parent();
+    const $content = $header.next(".accordeon-item__content");
 
     // Закриваємо всі інші
     $(".accordeon-item").not($item).removeClass("active");
-    $(".accordeon-item__content").not($content).slideUp();
+    $(".accordeon-item__content").not($content).slideUp(200);
 
-    // Тогл для поточного
+    const isOpening = !$item.hasClass("active");
+
+ 
     $item.toggleClass("active");
-    $content.slideToggle();
+    setTimeout(() => {
+      $content.slideToggle(300, function () { 
+        if (isOpening && window.innerWidth <= 768) {
+          const offset = 56;  
+          const top = $header.offset().top - offset;
+
+          $("html, body").animate({ scrollTop: top }, 300);
+        }
+      });
+    }, 200);
   });
 
   catalogFilters();

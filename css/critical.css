@@ -545,6 +545,7 @@ html:not(.touch-screen)::-webkit-scrollbar-thumb {
 }
 .sticky-content {
   position: relative;
+  padding-bottom: 50px;
 }
 .sticky-content.is-sticky {
   position: sticky;
@@ -1014,6 +1015,7 @@ html:not(.touch-screen)::-webkit-scrollbar-thumb {
   }
 }
 @media (max-width: 1055px) {
+ 
   .main-content nav {
     display: none;
   }
@@ -1214,7 +1216,10 @@ html:not(.touch-screen)::-webkit-scrollbar-thumb {
   }
 }
 
-@media (max-width: 1023px) {
+@media (max-width: 1023px) {  
+  .sticky-content { 
+    padding-bottom: 0px;
+  }
   .hero-slider .swiper-slide {
     position: relative;
     overflow: hidden;
