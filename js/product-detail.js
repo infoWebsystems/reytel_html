@@ -249,26 +249,61 @@ function stickyBottomInfoProduct() {
   if ($sticky.length === 0 || $buttons.length === 0) return;
 
   let lastScrollTop = 0;
+  let scrollUpStart = null;
+  const scrollUpThreshold = 50;
+
+  function isInViewport($el) {
+    const elementTop = $el.offset().top;
+    const elementBottom = elementTop + $el.outerHeight();
+
+    const viewportTop = $(window).scrollTop();
+    const viewportBottom = viewportTop + $(window).height();
+
+    return elementBottom > viewportTop && elementTop < viewportBottom;
+  }
 
   function updateSticky() {
     const scrollTop = $(window).scrollTop();
-    const buttonsBottom = $buttons.offset().top + $buttons.outerHeight();
 
-    // координати футера
+    const buttonsBottom =
+      $buttons.offset().top + $buttons.outerHeight();
+
     const footerTop = $footer.offset().top;
     const windowBottom = scrollTop + $(window).height();
 
     const footerVisible = windowBottom >= footerTop;
+    const buttonsVisible = isInViewport($buttons);
+ 
+    if (buttonsVisible || footerVisible) {
+      $sticky.removeClass("active");
+      lastScrollTop = scrollTop;
+      scrollUpStart = null;
+      return;  
+    }
 
     const scrollingDown = scrollTop > lastScrollTop;
-    lastScrollTop = scrollTop;
 
-  
-    if (scrollTop >= buttonsBottom && !footerVisible && !scrollingDown) {
-      $sticky.addClass("active");
-    } else {
+    if (scrollingDown) {
+      scrollUpStart = null;
       $sticky.removeClass("active");
+    } else {
+      if (scrollUpStart === null) {
+        scrollUpStart = lastScrollTop;
+      }
+
+      const scrolledUpDistance = scrollUpStart - scrollTop;
+
+      if (
+        scrollTop >= buttonsBottom &&
+        scrolledUpDistance >= scrollUpThreshold
+      ) {
+        $sticky.addClass("active");
+      } else {
+        $sticky.removeClass("active");
+      }
     }
+
+    lastScrollTop = scrollTop;
   }
 
   $(window).on("scroll resize", updateSticky);
