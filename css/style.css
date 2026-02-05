@@ -2270,7 +2270,9 @@
     display: block;
   }
 }
-
+.product-sticky__price .old{
+  text-decoration: line-through!important;
+}
 @media (max-width: 768px) {
   .category-card:after{
   content: "";
@@ -2509,7 +2511,7 @@
     font-size: 16px;
     line-height: 26px;
   }
-
+ 
   .product-sticky .content {
     padding-right: 0;
     width: 100%;
@@ -2548,6 +2550,13 @@
     display: flex;
     flex-direction: column;
     gap: 8px;
+    
+  }
+  #shopify-section-template--17796895408190__section_video_mMPTxP .product-video{
+    padding-bottom: 15px;
+  }
+  #shopify-section-template--17796895408190__section_video_mMPTxP video{
+    height: calc(100% - 15px);
   }
   .product-video video {
     left: 0;
@@ -3162,7 +3171,7 @@
     height: 40px;
   }
   .catalog-content {
-    padding: 0px 0 46px;
+    padding: 0px 0 46px!important;
   }
 
   .button-contained {

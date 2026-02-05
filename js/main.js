@@ -242,29 +242,22 @@ jQuery(function ($) {
     errorBox.html(errors.join("<br>")).slideDown();
   };
 
-  _functions.validateEngravingForm = function ($form) {
-    const errors = [];
+_functions.validateEngravingForm = function ($form) {
+  const errors = [];
 
-    const textRequiredMsg =
-      $form.data("error-text-required") || "Text is required.";
+  const requiredMsg =
+    $form.data("error-required") ||
+    "Please enter engraving text or upload an image.";
 
-    const imageRequiredMsg =
-      $form.data("error-image-required") || "Image is required.";
+  const text = $form.find("#engraving-text").val()?.trim();
+  const uploadedCount = $form.find(".upload-preview .preview-item").length;
 
-    // 1️⃣ engraving text
-    const text = $form.find("#engraving-text").val()?.trim();
-    if (!text) {
-      errors.push(textRequiredMsg);
-    }
+  if (!text && uploadedCount === 0) {
+    errors.push(requiredMsg);
+  }
 
-    // 2️⃣ uploaded images
-    const uploadedCount = $form.find(".upload-preview .preview-item").length;
-    if (uploadedCount === 0) {
-      errors.push(imageRequiredMsg);
-    }
-
-    return errors;
-  };
+  return errors;
+};
 });
 
 function resetReviewForm() {
@@ -1030,28 +1023,31 @@ $(document).ready(function () {
 });
 
 $(document).ready(function () {
-  if (window.innerWidth > 768) return; // тільки мобілка
+  if (window.innerWidth > 768) return;
 
-  let lastScroll = 0;
-  const threshold = 65; // поріг 20–30px
+  let lastScroll = window.scrollY;
+  const threshold = 65;
+  const minDelta = 20;  
   const header = $("header");
 
   $(window).on("scroll", function () {
-    const currentScroll = $(this).scrollTop();
-
-    // якщо скролимо вниз і перевищили поріг
-    if (currentScroll - lastScroll > threshold) {
+    const currentScroll = window.scrollY;
+    const delta = currentScroll - lastScroll;
+ 
+    if (Math.abs(delta) < minDelta) return;
+ 
+    if (delta > threshold) {
       header.addClass("scrolled-down");
       lastScroll = currentScroll;
     }
-
-    // якщо скролимо вверх
-    if (lastScroll - currentScroll > threshold) {
+ 
+    if (delta < -threshold) {
       header.removeClass("scrolled-down");
       lastScroll = currentScroll;
     }
   });
 });
+
 
 $(document).ready(function () {
   // ---------------- Masonry init for visible grids ----------------
