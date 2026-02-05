@@ -722,7 +722,9 @@
   background-color: var(--text-color-black);
   position: relative;
   overflow: hidden;
-  padding-bottom: 70%;
+    max-height: 60vh;
+    min-height: calc(88vh - 30px);
+    height: 100vh;
 }
 .product-video-title {
   position: absolute;
@@ -2567,6 +2569,7 @@
   .product-video {
     padding: 0;
     height: 540px;
+    max-height: 80vh;
   }
   .reviews-box__rating {
     margin: 24px 0 32px;
