@@ -2552,10 +2552,10 @@
     gap: 8px;
     
   }
-  #shopify-section-template--17796895408190__section_video_mMPTxP .product-video{
+  .product-video.home{
     padding-bottom: 15px;
   }
-  #shopify-section-template--17796895408190__section_video_mMPTxP video{
+ .product-video.home video{
     height: calc(100% - 15px);
   }
   .product-video video {
