@@ -40,14 +40,14 @@ ol {
 }
 
 #loader {
-  position: fixed;
+  /* position: fixed;
   left: 0;
   top: 0;
   width: 100%;
   z-index: 999;
   background-color: #fff;
   -webkit-animation: 1s linear forwards loader;
-  animation: 1s linear forwards loader;
+  animation: 1s linear forwards loader; */
 }
 @-webkit-keyframes loader {
   0%,
