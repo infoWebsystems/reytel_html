@@ -1767,7 +1767,8 @@
   color: #fff;
 }
 
-.size-wrapper {
+ 
+.size-table-wrapper{
   overflow-x: auto;
 }
 .size-wrapper table {
