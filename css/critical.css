@@ -312,6 +312,10 @@ html:not(.touch-screen)::-webkit-scrollbar-thumb {
   position: relative;
   display: flex;
   align-items: center;
+  color: #fff;
+}
+.header-options li svg{
+  width: 32px;
 }
 .header-options a img {
   width: 32px;
@@ -1023,10 +1027,10 @@ html:not(.touch-screen)::-webkit-scrollbar-thumb {
   .header .mobile-button:after,
   .header .mobile-button:before {
     content: "";
-    width: 24px;
+    width: 28px;
     position: absolute;
     left: 4px;
-    height: 2px;
+    height: 1px;
     background-color: var(--primary-color);
     transform: rotate(0);
     transition: all 0.3s;
@@ -1038,23 +1042,23 @@ html:not(.touch-screen)::-webkit-scrollbar-thumb {
   }
   .header .mobile-button .bar {
     transition: all 0.3s;
-    width: 18px;
+    width: 20px;
     position: absolute;
     top: 50%;
     margin-top: -1px;
     left: 4px;
-    height: 2px;
+    height: 1px;
     background-color: var(--primary-color);
   }
 
   .header .mobile-button.active:after {
     transform: rotate(45deg);
-    top: 14px;
+    top: 16px;
   }
   .header .mobile-button.active:before {
-    top: 14px;
+    top: 16px;
     transform: rotate(-45deg);
-    width: 24px;
+    width: 28px;
   }
   .header .mobile-button.active .bar {
     opacity: 0;
