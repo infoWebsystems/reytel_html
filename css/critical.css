@@ -1359,6 +1359,7 @@ html:not(.touch-screen)::-webkit-scrollbar-thumb {
     flex-direction: column;
     align-items: flex-start;
     gap: 16px;
+    display: flex;
   }
    .product-detail__content .product-detail__content-buttons .wishlist-btn {
       min-height: 54px!important;
