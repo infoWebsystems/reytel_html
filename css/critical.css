@@ -221,6 +221,7 @@ html:not(.touch-screen)::-webkit-scrollbar-thumb {
   padding: 40px 15px;
   border-top: 2px solid #5e5e5e;
   background-color: #000000;
+  max-height: calc(100vh - 100px);
 }
 .sub-menu__header {
   display: none;
@@ -230,25 +231,42 @@ html:not(.touch-screen)::-webkit-scrollbar-thumb {
   margin: auto;
   display: flex;
   align-items: flex-start;
-  gap: 5%;
+  gap: 2.2rem;
 }
 .header .item-col {
-  flex: auto;
-  max-width: 33;
+  /* flex: auto; */
+  width: 100%;
+  /* max-width: 33%; */
 }
 .header .sub-menu .content {
   display: flex;
   gap: 24px;
   flex: auto;
+    flex-direction: column;
+    max-height: 76vh;
+    overflow: auto;
+
 }
 .header .sub-menu .sidebar {
-  width: 450px;
+  width: 66%;
+      display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+overflow: auto;
+    max-height: calc(100vh - 155px);    
 }
+
+
 
 .header .sidebar {
   display: flex;
   flex-direction: column;
   gap: 24px;
+}
+.header .content:not(.touch-screen) ::-webkit-scrollbar,
+.header .content:not(.touch-screen)::-webkit-scrollbar,
+.header .sidebar:not(.touch-screen) ::-webkit-scrollbar,
+.header .sidebar:not(.touch-screen)::-webkit-scrollbar {
+  width: 5px; 
 }
 .header .sidebar a {
   position: relative;
@@ -266,7 +284,7 @@ html:not(.touch-screen)::-webkit-scrollbar-thumb {
   transition: all 0.4s ease;
 }
 .header .sidebar a:before {
-  padding-top: 60%;
+  padding-top: 10rem;
   content: "";
   display: block;
 }
@@ -1208,6 +1226,17 @@ html:not(.touch-screen)::-webkit-scrollbar-thumb {
   .header .sub-menu .sidebar {
     width: 100%;
     margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex: none;
+    max-height: none;
+  }
+  .header .sidebar a:before {
+      padding-top: 8rem; 
+  }  
+  .header .sub-menu .content{
+    max-height: none;
   }
 }
 
