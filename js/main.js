@@ -629,14 +629,20 @@ function initHeroSlider() {
       slideToClickedSlide: true,
       centeredSlides: false,
       centerInsufficientSlides: false,
-      // loop: true,
+      loop: true,
+      autoplay:true,
+      autoplay: {
+        delay: 4000,  
+        disableOnInteraction: false, 
+      }      
     });
 
     // Основний слайдер
     mainSwiper = new Swiper(".hero-slider", {
       slidesPerView: 1,
       spaceBetween: 8,
-      // loop: true,
+      loop: true,
+      autoplay:true,
       thumbs: {
         swiper: thumbsSwiper,
       },
