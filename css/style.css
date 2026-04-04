@@ -718,8 +718,7 @@
 }
 
 .product-video {
-  padding: 24px;
-  background-color: var(--text-color-black);
+  padding: 24px; 
   position: relative;
   overflow: hidden;
     max-height: 60vh;
@@ -1068,11 +1067,7 @@
 .page-pagination__mob {
   display: none;
 }
-
-.collections {
-  background-color: #15161a;
-}
-
+ 
 .collections .content {
   display: flex;
   gap: 24px;
@@ -1121,13 +1116,15 @@
 
 /* ARTICLE */
 .article-box {
-  padding: 24px;
-  background-color: #15161a;
+  padding: 24px; 
+  background-color: rgba(246, 247, 249, 1);
 }
 .article-box__content {
   display: flex;
   gap: 24px;
   align-items: center;
+  max-width: 1920px;
+  margin: auto;
 }
 .article-box__text {
   padding: 64px 5%;
@@ -1141,7 +1138,7 @@
   font-weight: 300;
   font-size: 24px;
   line-height: 34px;
-  color: #fff;
+  color: rgba(21, 22, 26, 1);
 }
 .article-box__text .text {
   display: flex;
@@ -1177,6 +1174,8 @@
 
 .article-second {
   padding: 96px 24px;
+  max-width: 1920px;
+  margin: auto;
 }
 .article-second .stack {
   gap: 24px;
@@ -1244,6 +1243,8 @@
   overflow: hidden;
   transition: all 0.4s ease;
   position: relative;
+  max-width: 1920px;
+  margin: auto;
 }
 .article-second__content.active {
   max-height: 5000px;
@@ -1280,13 +1281,14 @@
 .instagram-box {
   overflow: hidden;
   padding: 96px 24px;
-  background-color: var(--text-color-black);
+  background-color: rgba(246, 247, 249, 1);
 }
 .instagram-box__header {
   margin-bottom: 32px;
   display: flex;
   align-items: baseline;
   gap: 16px;
+  color: rgba(21, 22, 26, 1);
 }
 
 .instagram-box__header .link {
@@ -1297,6 +1299,7 @@
   letter-spacing: 1px;
   text-transform: uppercase;
   text-decoration: underline;
+  color: rgba(21, 22, 26, 1);
 }
 .instagram-box .swiper-slide {
   display: flex;
@@ -1389,13 +1392,12 @@
 }
 
 .ugc-box {
-  background-color: var(--background-color-black);
+  background-color: rgba(246, 247, 249, 1);
   padding: 96px 24px;
 }
 
 .categories {
-  padding: 24px 0 0;
-  background-color: #15161a;
+  padding: 24px 0 0; 
 }
 .categories .container {
   display: flex;
