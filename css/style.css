@@ -3243,3 +3243,63 @@
     transform: none !important;
   }
 }
+
+
+
+.footer__section .disclosure__toggle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+  background: transparent;
+  line-height: 1;
+}
+
+.switcher-icon {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: -1px;
+}
+
+.switcher-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* language */
+.language-icon {
+  width: 18px;
+  height: 18px;
+}
+
+.language-icon svg {
+  stroke: currentColor;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* market */
+.market-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.market-icon svg {
+  fill: currentColor;
+}
+
+/* arrow */
+.disclosure__toggle .icon {
+  width: 11px;
+  height: 11px;
+  margin-left: -2px;
+}
+
+ 
